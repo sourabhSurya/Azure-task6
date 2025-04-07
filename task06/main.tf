@@ -1,9 +1,8 @@
 resource "azurerm_resource_group" "main" {
   name     = local.rg_name
   location = var.region
-  tags = {
-    Creator = "sourabh_suryawanshi@epam.com"
-  }
+  
+  tags = var.tags
 }
 
 data "azurerm_key_vault" "main" {
