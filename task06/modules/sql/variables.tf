@@ -1,30 +1,54 @@
-variable "name_prefix" {
-  description = "Prefix used for resource names"
+variable "region" {
+  description = "Region to deploy SQL resources"
   type        = string
 }
 
-variable "location" {
-  description = "Azure region"
+variable "sql_server_name" {
+  description = "Name of the SQL Server"
   type        = string
 }
 
-variable "resource_group" {
-  description = "Resource group name"
+variable "sql_db_name" {
+  description = "Name of the SQL Database"
   type        = string
 }
 
-variable "key_vault_name" {
-  description = "Name of the existing Azure Key Vault"
+variable "sql_admin_name" {
+  description = "SQL admin username"
   type        = string
 }
 
-variable "key_vault_rg" {
-  description = "Resource group of the existing Key Vault"
+variable "sql_admin_name_secret" {
+  description = "Key Vault Secret name for SQL admin username"
   type        = string
 }
 
-variable "verification_ip" {
-  description = "IP address for the firewall rule to allow verification access"
+variable "sql_admin_password_secret" {
+  description = "Key Vault Secret name for SQL admin password"
   type        = string
 }
 
+variable "sql_firewall_rule_name" {
+  description = "Firewall rule name for verification"
+  type        = string
+}
+
+variable "allowed_ip_address" {
+  description = "IP address allowed by the firewall rule"
+  type        = string
+}
+
+variable "resource_group_name" {
+  description = "Resource group for SQL Server and Database"
+  type        = string
+}
+
+variable "key_vault_id" {
+  description = "Key Vault ID to store secrets"
+  type        = string
+}
+
+variable "tags" {
+  description = "Tags to associate with resources"
+  type        = map(string)
+}
