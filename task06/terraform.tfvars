@@ -1,5 +1,5 @@
 name_prefix     = "cmaz-dfc0edb2-mod6"
-location        = "East US"
+location        = "Central US"
 key_vault_rg    = "cmaz-dfc0edb2-mod6-kv-rg"
 key_vault_name  = "cmaz-dfc0edb2-mod6-kv"
 verification_ip = "18.153.146.156"
